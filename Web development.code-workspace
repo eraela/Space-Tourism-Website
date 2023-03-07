@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "../../Web development"
+	},
+	{
+		"path": "../../nft-preview-card-component-main"
+	},
+	{
+		"path": ".."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "space-tourism-website-main"
+  }
+}

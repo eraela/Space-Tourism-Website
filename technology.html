@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="technology.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPACE | Tourism</title>
+    <!-- FOR THE SPACE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Cormorant+Garamond:wght@300;400&family=David+Libre&family=Forum&family=League+Script&family=Merriweather&family=Molle&family=Montserrat:wght@900&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FOR THE PARAGRAPH -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Cormorant+Garamond:wght@300;400&family=David+Libre&family=Forum&family=League+Script&family=Merriweather&family=Molle&family=Montserrat:wght@900&family=Saira+Semi+Condensed:wght@100&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--hero section start -->
+    <div class="wrapper">
+      <!-- header start -->
+      <header>
+        <!-- left part header -->
+        <div class="logo">
+          <img src="./assets/shared/logo.svg" alt="" />
+        </div>
+        <div class="navigation flex">
+          <ul class="w-full flex">
+            <li>
+              <a href="index.html"><span class="bold">00</span> HOME</a>
+            </li>
+            <li>
+              <a href="destination.html"><span>01</span> DESTINATION</a>
+            </li>
+            <li>
+              <a href="crew.html"><span>02</span> CREW</a>
+            </li>
+            <li>
+              <a href="technology.html" class="header_active"
+                ><span>03</span> TECHNOLOGY</a
+              >
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- header end -->
+      <div class="container">
+        <div class="fade">
+          <div class="flex single-item">
+            <div class="col-2 hero_divider_right">
+              <h2>
+                <span style="opacity: 0.6; padding-right: 5px">03 </span> SPACE
+                LAUNCH 101
+              </h2>
+              <div class="grid_wrapper">
+                <div>
+                  <div class="w-full flex my-3">
+                    <div class="technology_count active">
+                      <div>
+                        <span>1</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-full flex my-3">
+                    <div class="technology_count">
+                      <div>
+                        <span>2</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="w-full flex my-3">
+                    <div class="technology_count">
+                      <div>
+                        <span>3</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="technology_content active">
+                  <h2>THE TERMINOLOGY…</h2>
+                  <h4>LAUNCH VEHICLE</h4>
+                  <p class="esmeralda">
+                    A launch vehicle or carrier rocket is a rocket-propelled
+                    vehicle used to carry a payload from Earth's surface to
+                    space, usually to Earth orbit or beyond. Our WEB-X carrier
+                    rocket is the most powerful in operation. Standing 150
+                    metres tall, it's quite an awe-inspiring sight on the launch
+                    pad!
+                  </p>
+                </div>
+
+                <div class="technology_content">
+                  <h2>THE TERMINOLOGY…</h2>
+                  <h4>SPACEPORT</h4>
+                  <p class="esmeralda">
+                    A spaceport or cosmodrome is a site for launching (or
+                    receiving) spacecraft, by analogy to the seaport for ships
+                    or airport for aircraft. Based in the famous Cape Canaveral,
+                    our spaceport is ideally situated to take advantage of the
+                    Earth’s rotation for launch.
+                  </p>
+                </div>
+
+                <div class="technology_content">
+                  <h2>THE TERMINOLOGY…</h2>
+                  <h4>SPACE CAPSULE</h4>
+                  <p class="esmeralda">
+                    A space capsule is an often-crewed spacecraft that uses a
+                    blunt-body reentry capsule to reenter the Earth's atmosphere
+                    without wings. Our capsule is where you'll spend your time
+                    during the flight. It includes a space gym, cinema, and
+                    plenty of other activities to keep you entertained.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-2 hero_divider_left relative">
+              <img
+                src="assets/technology/image-launch-vehicle-landscape.jpg"
+                alt=""
+                width="90%"
+                height="100%"
+                class="img active"
+              />
+              <img
+                src="assets/technology/image-launch-vehicle-portrait.jpg"
+                alt=""
+                width="90%"
+                height="100%"
+                class="img"
+              />
+              <img
+                src="assets/technology/image-space-capsule-landscape.jpg"
+                alt=""
+                width="90%"
+                height="100%"
+                class="img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const buttons = document.querySelectorAll(".technology_count");
+      const content = document.querySelectorAll(".technology_content");
+      const img = document.querySelectorAll(".img");
+
+      let currentIndex = 0;
+
+      function setActiveItem(currentIndex) {
+        buttons.forEach((item) => item.classList.remove("active"));
+        content.forEach((item) => item.classList.remove("active"));
+        img.forEach((item) => item.classList.remove("active"));
+
+        buttons[currentIndex].classList.add("active");
+        content[currentIndex].classList.add("active");
+        img[currentIndex].classList.add("active");
+      }
+
+      buttons.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          currentIndex = index;
+          setActiveItem(currentIndex);
+        });
+      });
+    </script>
+  </body>
+  <!--hero section end-->
+</html>
